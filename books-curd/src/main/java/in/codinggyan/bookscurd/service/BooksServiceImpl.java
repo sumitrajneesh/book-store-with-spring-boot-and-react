@@ -37,6 +37,10 @@ public class BooksServiceImpl implements BooksService {
     // Update operation
 
 
+    public Books fetchBooksById(Long id) {
+        return booksRepository.findById(id).orElseThrow(RuntimeException::new);
+    }
+
     @Override
     public void deleteBooksById(Long bookId) {
         booksRepository.deleteById(bookId);

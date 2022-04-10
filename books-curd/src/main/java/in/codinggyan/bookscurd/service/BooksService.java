@@ -17,6 +17,8 @@ public interface BooksService {
 
     Books updateBooks(Books books, Long bookId);
 
+    Books fetchBooksById(Long bookId);
+
     // Delete operation
     void deleteBooksById(Long bookId);
 
